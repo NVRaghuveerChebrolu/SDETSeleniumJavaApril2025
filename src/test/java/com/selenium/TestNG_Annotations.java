@@ -18,7 +18,7 @@ public class TestNG_Annotations {
 		System.out.println("testcase2");
 	}
 	
-	@Test(priority=2)
+	@Test(priority=2,dependsOnMethods= {"testCase2"})
 	public void testCase1() {
 		System.out.println("testcase1");
 		Assert.assertEquals(false, true);
