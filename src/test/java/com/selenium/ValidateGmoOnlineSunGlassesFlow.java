@@ -14,6 +14,7 @@ import org.testng.annotations.BeforeClass;
 import java.io.IOException;
 import java.time.Duration;
 
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeTest;
@@ -23,13 +24,16 @@ import org.testng.annotations.AfterSuite;
 
 public class ValidateGmoOnlineSunGlassesFlow extends Library {
 
-	@Test(priority = 0)
+	@Test()
 	public void ValidateLaunchOfGmoOnlineApplication() {
 		System.out.println("inside ValidateLaunchOfGmoOnlineApplication");
 		driver.get(objProp.getProperty("GmoOnLineAppURL"));
+		driver.findElement(By.id("details-button")).click();
+		//driver.findElement(By.xpath("//button[@id='details-button']")).click();
+		driver.findElement(By.xpath("//a[@id='proceed-link']")).click();
 		PageLoadTimeOut(Constants.PageLoadTimeOut);
 		String titleOfGMO_OnlineApp = driver.getTitle();
-		Assert.assertEquals(titleOfGMO_OnlineApp, objProp.getProperty("TitleOfGmoOnlineHomePage"));
+		Assert.assertEquals(titleOfGMO_OnlineApp, objProp.getProperty("GmoOnlineAppTitle"));
 	}
 
 	@Test(priority = 1,dependsOnMethods = {"ValidateLaunchOfGmoOnlineApplication"})
@@ -105,7 +109,7 @@ public class ValidateGmoOnlineSunGlassesFlow extends Library {
 	public void afterTest() {
 		System.out.println("inisde afterTest");
 	}
-
+	
 	@BeforeSuite
 	public void beforeSuite() {
 		System.out.println("inisde beforeSuite");

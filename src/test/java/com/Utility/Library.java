@@ -17,7 +17,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 public class Library {
 
 	public static Properties objProp ;
-	public static WebDriver driver;
+	public WebDriver driver;
 	
 	public void ReadPropertiesFile() throws IOException {
 		File objFile = new File(System.getProperty("user.dir")+"//src//test//resources//Config.properties");
@@ -32,7 +32,7 @@ public class Library {
 		}
 	}
 	
-	public static void LaunchBrowser() {
+	public void LaunchBrowser() {
 		String browserFromPropFile = objProp.getProperty("browser");
 		switch(browserFromPropFile.toLowerCase()) {
 		case "chrome":
