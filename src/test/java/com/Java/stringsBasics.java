@@ -4,9 +4,9 @@ public class stringsBasics {
 	//check edit form git hub
 	public static void main(String[] args) {
 		// declaring using string literal
-		String s = "LearningJava";
+		String s = "LearningJava";// saved inside the string constant pool under heap memory area.
 		// declaring a string using new operator
-		String Str2 = new String("LearningJava");
+		String Str2 = new String("LearningJava");//pointing out to the address which is outside the string constant pool
 		System.out.println(Str2.intern());
 		// Returns the number of characters in the String.
 		System.out.println("String length = " + s.length());
