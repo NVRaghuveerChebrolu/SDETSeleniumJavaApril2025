@@ -22,6 +22,7 @@ public class Library {
 	public void ReadPropertiesFile() throws IOException {
 		File objFile = new File(System.getProperty("user.dir")+"//src//test//resources//Config.properties");
 		try {
+			//class used for reading the data from the file
 			FileInputStream objFileInput = new FileInputStream(objFile);
 			objProp = new Properties();
 			objProp.load(objFileInput);
