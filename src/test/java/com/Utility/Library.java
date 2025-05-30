@@ -7,7 +7,9 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -61,6 +63,16 @@ public class Library {
 	
 	public void PageLoadTimeOut(int seconds) {
 		  driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(seconds));
+	}
+	
+	public void ScrollIntoWebElement(WebElement element) {
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("arguments[0].scrollIntoView(true);", element);
+		
+		//js.executeScript("window.scrollBy(0,250)", "");// to perform scroll down operation by 250 pixels 
+		//js.executeScript("window.scrollBy(0,-340)", "");// to perform scroll up operation by 340 pixels 
+		//js.executeScript("window.scrollBy(250,0)", "");// to perform scroll right operation by 250 pixels 
+		//js.executeScript("window.scrollBy(-550,0)", "");// to perform scroll left operation by 550 pixels 
 	}
 	
 	
