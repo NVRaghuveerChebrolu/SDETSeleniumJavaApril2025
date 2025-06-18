@@ -1,0 +1,35 @@
+Selenium 3 VS 4 : ttps://blog.testproject.io/2021/06/01/selenium-3-vs-selenium-4/
+Selenium Hierarchy : https://www.softwaretestingo.com/selenium-webdriver-interface-classes-hierarchy/
+To get master in Xpath : http://pragmatictestlabs.com/2020/01/28/mastering-xpath-for-selenium-test-automation-engineers/
+https://www.restapitutorial.com/httpstatuscodes.html
+https://www.w3schools.com/sql
+https://www.hackerrank.com/
+https://reqres.in/
+https://gorest.co.in/
+https://www.jenkins.io/download/
+https://updates.jenkins.io/download/war/
+java -jar jenkins.war --enable-future-java --httpPort=8080
+https://stackoverflow.com/questions/12472645/how-do-i-schedule-jobs-in-jenkins
+https://www.toolsqa.com/selenium-webdriver/selenium-headless-browser-testing/
+https://dev.mysql.com/downloads/installer/
+https://github.com/SeleniumHQ/selenium/releases/tag/selenium-4.21.0
+https://github.com/SeleniumHQ/selenium/releases/tag/selenium-4.23.0
+https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/#use-the-path-environment-variable
+https://googlechromelabs.github.io/chrome-for-testing/
+java -jar selenium-server-4.21.0.jar standalone
+https://www.selenium.dev/documentation/grid/components/
+https://www.w3.org/TR/css-color-3/#html4 -> to know the color details
+https://www.geeksforgeeks.org/how-to-delete-last-commit-in-git/
+
+git reset --hard HEAD~1
+git push origin main --force
+
+use below to install mysql
+https://www.youtube.com/watch?v=bcrAdegPdAI&ab_channel=AbhishekChaudhary\
+https://www.youtube.com/watch?v=ftEGdHTSVbw&ab_channel=EducationAnalysist
+
+mysql>
+CREATE USER 'user123'@'localhost' IDENTIFIED BY 'password123';
+GRANT ALL PRIVILEGES ON * . * TO 'user123'@'localhost';
+FLUSH PRIVILEGES;
+
