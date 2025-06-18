@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
@@ -23,8 +25,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.ie.InternetExplorerOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestResult;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -225,5 +231,51 @@ public class Library {
 			}
 		}
 	}
+	
+	//below is the method for selenium 4
+			public WebDriver getBrowserCapabilities(String BrowserName) {
+				if (BrowserName == null || BrowserName.equalsIgnoreCase("FIREFOX")) {
+					FirefoxOptions options = new FirefoxOptions();
+					// options.setHeadless(headless);
+					try {
+						driver = new RemoteWebDriver(new URL("http://localhost:4444"), options);
+					} catch (MalformedURLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				} else if (BrowserName.equalsIgnoreCase("IE")) {
+					// capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,
+					// true);
+					// capabilities.setCapability(InternetExplorerDriver.IE_ENSURE_CLEAN_SESSION,
+					// true);
+					InternetExplorerOptions options = new InternetExplorerOptions();
+					try {
+						driver = new RemoteWebDriver(new URL("http://localhost:4444"), options);
+					} catch (MalformedURLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				} else 
+					if (BrowserName.equalsIgnoreCase("CHROME")) {
+					ChromeOptions options = new ChromeOptions();
+					// options.setHeadless(headless);
+					try {
+						driver = new RemoteWebDriver(new URL("http://localhost:4444"), options);
+					} catch (MalformedURLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				} else if (BrowserName.equalsIgnoreCase("EDGE")) {
+					EdgeOptions options = new EdgeOptions();
+					try {
+						driver = new RemoteWebDriver(new URL("http://localhost:4444"), options);
+					} catch (MalformedURLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+
+				}
+				return driver;
+			}
 	
 }
