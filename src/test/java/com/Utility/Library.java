@@ -114,7 +114,7 @@ public class Library {
 			FileInputStream objFileInput = new FileInputStream(objFile);
 			objProp = new Properties();
 			objProp.load(objFileInput);
-			System.out.println(objProp.getProperty("GmoOnlineAppURL"));
+			System.out.println(objProp.getProperty("GmoOnLineAppURL"));
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
