@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Suite">
+	<test name="Test">
+		<classes>
+			<class name="com.selenium.TestNG_Annotations">
+				<methods>
+					<!-- <include name="testCase4"></include> 
+					<include name="testCase2"></include> -->
+					<exclude name="testCase2"></exclude>
+				</methods>
+			</class>
+			<class name="com.selenium.ValidateDropDownsAndCalender">
+				<methods>
+					<!-- <include name="ValidateDropDownsDemoQAPracticeFormLoded"></include> -->
+					<exclude name="ValidateDropDownsAndCalender"></exclude>
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

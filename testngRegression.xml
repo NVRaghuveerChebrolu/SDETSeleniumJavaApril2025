@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="com.selenium.Assignment9_Handling_MouseOperations" />
+			<class name="com.selenium.ValidateDropDownsAndCalender" />
+			<class
+				name="com.selenium.Assignment6_Handling_Alerts_Automation_Demo_Site" />
+			<class name="com.selenium.Assignment6_Handling_Alerts_DemoQA" />
+			<class name="com.selenium.ValidateWebTableInDataTables" />
+			<class name="com.selenium.ValidateMouseOperationsInSeleneium">
+			
+			</class>
+			<class
+				name="com.selenium.Assignment6_Handling_Alerts_HYR_Tutorials" />
+			<class name="com.selenium.ValidateAlertsInSeleneium" />
+			<class
+				name="com.selenium.Assignment4_Launch_And_Validate_Ecommerce_Website" />
+			<class
+				name="com.selenium.Assignment6_Handling_Alerts_Testing_Alerts" />
+			<class name="com.selenium.ValidateFramesInSeleneium" />
+			<class name="com.selenium.TestNG_Annotations" />
+			<class name="com.selenium.ValidateMultipleWindowsInSelenium" />
+			<class name="com.selenium.ValidateGmoOnlineSunGlassesFlow" />
+			<class name="com.selenium.Assignment7_Handling_Frames_DemoQA" />
+			<class name="com.seleniuGrid.Test1Chrome" />
+			<class name="com.testNGTestNgGroups"/>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
