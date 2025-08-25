@@ -35,5 +35,3 @@ Scenario: validate the login and scroll functionality in home page
     Then verify the title of Place order page
     And veriy the unit prce and total price calculated
     When User perform scroll operation to the bottom of the page
-    
-    

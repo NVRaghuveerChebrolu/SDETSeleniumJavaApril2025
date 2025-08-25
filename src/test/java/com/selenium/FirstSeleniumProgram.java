@@ -22,8 +22,8 @@ public class FirstSeleniumProgram extends Library{
 		driver= new ChromeDriver();
 		driver.manage().window().maximize();
 		//driver.get("https://demo.borland.com/gmopost/");
-		Library objLibrary = new Library();
-		objLibrary.ReadPropertirsFile();
+		//Library objLibrary = new Library();
+		//objLibrary.ReadPropertirsFile();
 		driver.get(objProp.getProperty("GmoOnlineAppURL"));
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 		driver.findElement(By.xpath("//button[@id='details-button']")).click();
